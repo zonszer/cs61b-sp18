@@ -33,12 +33,12 @@ public class NBody {
         Planet[] planets = readPlanets(filename);
         int n = planets.length;
 
-        StdDraw.enableDoubleBuffering();
+        StdDraw.enableDoubleBuffering();            
 
         StdDraw.setScale(-radius, radius);
         StdDraw.picture(0, 0, "images/starfield.jpg");
-        for (Planet planet : planets) {
-            planet.draw();
+        for (Planet planet : planets) {             //2
+            planet.draw();                          //2.1
         }
 
         for (double time = 0; time < T; time += dt) {
